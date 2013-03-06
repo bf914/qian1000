@@ -1,0 +1,12 @@
+#!/bin/sh -x
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+touch /var/lock/subsys/local
+svnserve -d -r /svndata/qingxiaolong --listen-port 3691
+svnserve -d -r /svndata/lanxiong --listen-port 3692
+svnserve -d -r /svndata/hongbo --listen-port 3693
+svnserve -d -r /svndata/game --listen-port 3694
+
